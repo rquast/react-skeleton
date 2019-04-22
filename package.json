@@ -1,0 +1,34 @@
+{
+  "name": "react-serverless-skeleton",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@lerna/filter-options": "^3.13.3",
+    "@types/jest": "24.0.11",
+    "jest": "24.7.1",
+    "lerna": "^3.13.3"
+  },
+  "resolutions": {
+    "node-sass": "npm:sass"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --npm-client=yarn",
+    "start": "lerna run start --stream --npm-client=yarn",
+    "tsc": "lerna run tsc --stream --npm-client=yarn",
+    "watch": "lerna run watch --stream --npm-client=yarn",
+    "clean": "lerna clean --npm-client=yarn",
+    "build": "yarn --cwd ./packages/backend/chat-example-server run build",
+    "test": "jest",
+    "test:ci": "jest --ci --runInBand",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "workspaces": [
+    "packages/frontend/*",
+    "packages/backend/*"
+  ]
+}

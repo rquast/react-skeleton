@@ -1,0 +1,64 @@
+{
+  "name": "@react-serverless-skeleton/app",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@react-serverless-skeleton/components": "0.0.0",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.4",
+    "@types/react": "16.8.13",
+    "@types/react-dom": "16.8.4",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-bulma-components": "^2.3.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "sass": "^1.18.0",
+    "typescript": "3.4.4"
+  },
+  "resolutions": {
+    "node-sass": "npm:sass"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "typescript",
+      "typescript/react",
+      "typescript/prettier",
+      "typescript/prettier-react",
+      "react-app"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true
+        }
+      ],
+      "@typescript-eslint/explicit-member-accessibility": 0,
+      "@typescript-eslint/explicit-function-return-type": 0
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/react-router-dom": "^4.3.2",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-config-typescript": "^2.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "graphql": "^14.2.1",
+    "prettier": "^1.17.0"
+  }
+}
