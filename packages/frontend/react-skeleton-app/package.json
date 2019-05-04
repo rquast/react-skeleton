@@ -3,23 +3,30 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.3.1",
+    "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.5",
+    "react-bulma-components": "^2.3.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
     "@types/jest": "^24.0.12",
     "@types/node": "^12.0.0",
     "@types/react": "^16.8.15",
     "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "^4.3.2",
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "eslint-config-prettier": "^4.2.0",
+    "eslint-config-typescript": "^2.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "node-sass": "npm:sass",
-    "react": "^16.8.6",
-    "react-bulma-components": "^2.3.0",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
+    "prettier": "^1.17.0",
     "react-scripts": "^3.0.0",
     "sass": "^1.20.1",
     "typescript": "^3.4.5"
-  },
-  "resolutions": {
-    "node-sass": "npm:sass"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -52,15 +59,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "@types/react-router-dom": "^4.3.2",
-    "@typescript-eslint/eslint-plugin": "^1.6.0",
-    "babel-core": "7.0.0-bridge.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-config-typescript": "^2.0.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "graphql": "^14.2.1",
-    "prettier": "^1.17.0"
-  }
+  ]
 }
