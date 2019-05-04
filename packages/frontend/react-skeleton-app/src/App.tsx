@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Welcome from './Welcome';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { HelloWorld } from '@react-serverless-skeleton/components';
+import { HelloWorld } from './components/HelloWorld';
 
 class App extends Component {
   render() {

@@ -28,6 +28,7 @@ yarn run test
 ```
 
 ### TODO
+- Add lerna update wizard for dependency management: https://github.com/Anifacted/lerna-update-wizard
 - Create a serverless.yml to deploy the Apollo Server and Websocket handler
 - Add Apollo Client to the react app
 - Add serverless-offline plugin with Websocket support

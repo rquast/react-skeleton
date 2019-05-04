@@ -9,13 +9,9 @@
     "lerna": "^3.13.4",
     "jest": "24.7.1"
   },
-  "resolutions": {
-    "node-sass": "npm:sass"
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap --npm-client=yarn",
     "start": "lerna run start --stream --npm-client=yarn",
-    "tsc": "lerna run tsc --stream --npm-client=yarn",
     "watch": "lerna run watch --stream --npm-client=yarn",
     "clean": "lerna clean --npm-client=yarn",
     "build": "yarn --cwd ./packages/backend/chat-example-server run build",
