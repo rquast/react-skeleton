@@ -12,7 +12,7 @@
     "@types/aws-lambda": "8.10.17",
     "@types/node": "8.10.39",
     "@zeit/ncc": "0.8.1",
-    "typescript": "3.2.2"
+    "typescript": "^3.4.5"
   },
   "scripts": {
     "build": "yarn --cwd ../aws-lambda-graphql run build; yarn --cwd ../aws-lambda-ws-link run build; ncc build src/index.ts -o dist",

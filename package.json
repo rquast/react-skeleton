@@ -5,10 +5,9 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@lerna/filter-options": "^3.13.3",
-    "@types/jest": "24.0.11",
-    "jest": "24.7.1",
-    "lerna": "^3.13.3"
+    "@types/jest": "^24.0.12",
+    "lerna": "^3.13.4",
+    "jest": "24.7.1"
   },
   "resolutions": {
     "node-sass": "npm:sass"
