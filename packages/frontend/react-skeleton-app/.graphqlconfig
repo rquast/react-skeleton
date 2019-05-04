@@ -4,7 +4,7 @@
   "extensions": {
     "endpoints": {
       "React Skeleton API": {
-        "url": "http://localhost:8000/graphql",
+        "url": "https://fakerql.com/graphql",
         "headers": {
           "user-agent": "JS GraphQL"
         },
