@@ -10,7 +10,8 @@ import { Products } from './gql/Products';
 const client = new ApolloClient({ uri: 'https://fakerql.com/graphql' });
 
 interface IAppState {
-    date: Date
+    date: Date,
+    viewing: string
 }
 
 class App extends Component<{}, IAppState> {
@@ -18,16 +19,16 @@ class App extends Component<{}, IAppState> {
     constructor(props: Readonly<{}>) {
         super(props);
         this.state = {
-            date: new Date()
+            date: new Date(),
+            viewing: ''
         };
     }
 
     productSelected = (optionValue: string) => {
-        console.log(`Viewing ${optionValue}`);
+        this.setState({ viewing: optionValue });
     };
 
     render() {
-        console.log(this.state, this.props);
         return (
             <ApolloProvider client={client}>
                 <div className="App">
@@ -39,7 +40,8 @@ class App extends Component<{}, IAppState> {
                         </div>
                     </header>
                     <div>
-                        hello {this.state.date.toDateString()}
+                        hello {this.state.date.toISOString()}<br />
+                        Currently viewing: {this.state.viewing}
                     </div>
                     <div className="container">
                         <Router>
