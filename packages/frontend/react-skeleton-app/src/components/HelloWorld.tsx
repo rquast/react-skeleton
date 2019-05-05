@@ -1,2 +1,2 @@
-import * as React from "react";
+import * as React from 'react';
 export const HelloWorld = () => <div>Hello World!</div>;

@@ -39,12 +39,28 @@
     "lint:fix": "eslint './src/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
     "extends": [
-      "typescript",
-      "typescript/react",
-      "typescript/prettier",
-      "typescript/prettier-react",
-      "react-app"
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react"
     ],
     "rules": {
       "prettier/prettier": [
