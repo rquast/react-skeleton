@@ -12,7 +12,7 @@ const GET_PRODUCTS = gql`
     }
 `;
 
-export interface ProductProps {
+interface ProductProps {
     onProductSelected: any;
 }
 

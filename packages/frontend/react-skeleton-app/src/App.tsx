@@ -5,6 +5,11 @@ import { HelloWorld } from './components/HelloWorld';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { Products } from './gql/Products';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './rootReducer';
+
+const store = createStore(rootReducer);
 
 // TODO: configure endpoint with real one
 const client = new ApolloClient({ uri: 'https://fakerql.com/graphql' });
@@ -29,28 +34,31 @@ class App extends Component<{}, IAppState> {
     };
 
     render() {
+        console.log(store);
         return (
             <ApolloProvider client={client}>
-                <div className="App">
-                    <header className="App-header">
-                        <HelloWorld />
-                        <Products onProductSelected={this.productSelected} />
-                        <div className="notification">
-                            Notification...
-                        </div>
-                    </header>
-                    <div>
-                        hello {this.state.date.toISOString()}<br />
-                        Currently viewing: {this.state.viewing}
-                    </div>
-                    <div className="container">
-                        <Router>
-                            <div>
-                                <Route exact path="/welcome" component={Welcome}/>
+                <Provider store={store}>
+                    <div className="App">
+                        <header className="App-header">
+                            <HelloWorld />
+                            <Products onProductSelected={this.productSelected} />
+                            <div className="notification">
+                                Notification...
                             </div>
-                        </Router>
+                        </header>
+                        <div>
+                            hello {this.state.date.toISOString()}<br />
+                            Currently viewing: {this.state.viewing}
+                        </div>
+                        <div className="container">
+                            <Router>
+                                <div>
+                                    <Route exact path="/welcome" component={Welcome}/>
+                                </div>
+                            </Router>
+                        </div>
                     </div>
-                </div>
+                </Provider>
             </ApolloProvider>
         );
     }
