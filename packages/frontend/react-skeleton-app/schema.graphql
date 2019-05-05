@@ -1,0 +1,63 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}
+
+type AuthPayload {
+    token: String!
+}
+
+type Mutation {
+    createTodo(completed: Boolean, title: String!): Todo
+    login(email: String!, expiresIn: String, password: String!): AuthPayload
+    register(email: String!, expiresIn: String, password: String!): AuthPayload
+    updateUser(email: String, firstName: String, id: ID!, lastName: String): User
+}
+
+type Post {
+    author: User!
+    body: String!
+    createdAt: String!
+    id: ID!
+    published: Boolean!
+    title: String!
+}
+
+type Product {
+    id: ID!
+    name: String!
+    price: String!
+}
+
+type Query {
+    Post(id: ID!): Post
+    Product(id: ID!): Product
+    Todo(id: ID!): Todo
+    User(id: ID!): User
+    allPosts(count: Int): [Post]
+    allProducts(count: Int): [Product]
+    allTodos(count: Int): [Todo]
+    allUsers(count: Int): [User]
+    me: User
+}
+
+type Subscription {
+    todoAdded: Todo
+}
+
+type Todo {
+    completed: Boolean!
+    id: ID!
+    title: String!
+}
+
+type User {
+    avatar: String
+    email: String!
+    firstName: String!
+    id: ID!
+    lastName: String!
+}

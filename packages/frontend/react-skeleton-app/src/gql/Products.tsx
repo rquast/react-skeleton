@@ -16,7 +16,7 @@ export interface ProductProps {
     onProductSelected: any;
 }
 
-export const Products: React.FunctionComponent<ProductProps> = props => {
+export const Products: React.FunctionComponent<ProductProps> = (props) => {
     const { onProductSelected } = props;
     return (
         <Query query={GET_PRODUCTS}>
@@ -25,7 +25,7 @@ export const Products: React.FunctionComponent<ProductProps> = props => {
                 if (error) return `Error! ${error.message}`;
 
                 return (
-                    <select name="product" onChange={onProductSelected}>
+                    <select name="product" onChange={(evt) => {onProductSelected(evt.target.value)}}>
                         {data.allProducts.map((product: any) => (
                             <option key={product.id} value={product.name}>
                                 {product.name} - {product.price}
