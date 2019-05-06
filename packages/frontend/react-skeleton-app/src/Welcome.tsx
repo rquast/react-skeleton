@@ -13,10 +13,6 @@ import {
   Image
 } from 'react-bulma-components';
 
-// import logo from './logo.svg';
-// import './App.css';
-// @ts-ignore
-
 class Welcome extends Component {
   render() {
     return (

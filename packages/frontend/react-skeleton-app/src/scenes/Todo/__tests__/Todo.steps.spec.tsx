@@ -1,31 +1,30 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App';
+import Todo from '../Todo';
 
-const feature = loadFeature('./src/__features__/App.feature');
+const feature = loadFeature('./src/scenes/Todo/__features__/Todo.feature');
 
 defineFeature(feature, test => {
   test('Launching a SpaceX rocket', ({ given, when, then }) => {
-    let app: any;
+    let todo: any;
 
     given('I am Elon Musk attempting to launch a rocket into space', () => {
       const div = document.createElement('div');
-      app = <App />;
-      ReactDOM.render(app, div);
+      todo = <Todo />;
+      ReactDOM.render(todo, div);
     });
 
     when('I launch the rocket', () => {
-      console.log(app.props);
-      app.launch();
+      todo.launch();
     });
 
     then('the rocket should end up in space', () => {
-      expect(app.isInSpace).toBe(true);
+      expect(todo.isInSpace).toBe(true);
     });
 
     then('the booster(s) should land back on the launch pad', () => {
-      expect(app.boostersLanded).toBe(true);
+      expect(todo.boostersLanded).toBe(true);
     });
 
     then('nobody should doubt me ever again', () => {

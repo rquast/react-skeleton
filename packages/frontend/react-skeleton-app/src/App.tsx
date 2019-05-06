@@ -4,12 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { HelloWorld } from './components/HelloWorld';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import { Products } from './gql/Products';
+import { Products } from './components/Products';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import rootReducer from './rootReducer';
+import reducer from './services/reducer';
 
-const store = createStore(rootReducer);
+import './App.scss';
+
+const store = createStore(reducer);
 
 // TODO: configure endpoint with real one
 const client = new ApolloClient({ uri: 'https://fakerql.com/graphql' });
@@ -33,7 +35,6 @@ class App extends Component<{}, AppState> {
   };
 
   render() {
-    console.log(store);
     return (
       <ApolloProvider client={client}>
         <Provider store={store}>
